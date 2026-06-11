@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社公雅建設 | 東京都府中市・八王子市の総合建設会社</title>
+  <meta name="description" content="株式会社公雅建設は東京都府中市を拠点に、足場仮設・杭打ち・土工事・コンクリート工事・外構・解体工事を手がける建設会社です。東京都知事許可第143593号。">
+
+  <!-- OGP -->
+  <meta property="og:title" content="株式会社公雅建設 | 東京都府中市の総合建設会社">
+  <meta property="og:description" content="足場仮設・杭打ち・土工事・コンクリート工事・外構・解体工事。東京都府中市を拠点に、先進の技術と確かな施工で街づくりを支えます。">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================================================================
+     LOADER
+================================================================ -->
+<div id="loader" role="status" aria-label="読み込み中">
+  <div class="loader-logo">KOGA KENSETSU</div>
+  <div class="loader-bar"><div class="loader-bar-inner"></div></div>
+</div>
+
+<!-- ================================================================
+     HEADER
+================================================================ -->
+<header>
+  <div class="container">
+    <nav class="nav-inner" aria-label="グローバルナビゲーション">
+      <a href="#hero" class="nav-logo" aria-label="株式会社公雅建設 トップへ">
+        <span class="nav-logo-main">KOGA KENSETSU</span>
+        <span class="nav-logo-sub">株式会社公雅建設</span>
+      </a>
+
+      <button id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul id="nav-menu" role="menubar">
+        <li role="none"><a href="#services" role="menuitem">事業内容</a></li>
+        <li role="none"><a href="#works" role="menuitem">施工実績</a></li>
+        <li role="none"><a href="#estimate" role="menuitem">簡単見積もり</a></li>
+        <li role="none"><a href="#about" role="menuitem">会社概要</a></li>
+        <li role="none"><a href="#contact" role="menuitem">お問い合わせ</a></li>
+      </ul>
+
+      <a href="tel:0423605114" class="nav-tel" aria-label="電話番号 042-360-5114">
+        <span class="nav-tel-icon">📞</span>
+        042-360-5114
+      </a>
+    </nav>
+  </div>
+</header>
+
+<div id="nav-overlay" aria-hidden="true"></div>
+
+<!-- ================================================================
+     HERO
+================================================================ -->
+<section id="hero" aria-labelledby="hero-title">
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+  <div class="hero-grid-overlay" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge" aria-label="東京都知事許可 第143593号">
+      ✦ 東京都知事許可 第143593号
+    </div>
+
+    <h1 class="hero-title" id="hero-title">
+      <span class="line1">次世代の技術で</span>
+      <span class="line2">街をつくる。</span>
+    </h1>
+
+    <p class="typewriter-wrap" aria-live="polite">
+      専門は&nbsp;<span id="typewriter"></span>
+    </p>
+
+    <div class="hero-cta">
+      <a href="#contact" class="btn-primary">
+        無料でご相談
+        <span aria-hidden="true">→</span>
+      </a>
+      <a href="#works" class="btn-outline">
+        施工実績を見る
+      </a>
+    </div>
+
+    <div class="hero-stats" aria-label="実績数値">
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="350" data-suffix="+">0+</div>
+        <div class="hero-stat-label">累計施工件数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="20" data-suffix="年">0年</div>
+        <div class="hero-stat-label">業界経験</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="100" data-suffix="%">0%</div>
+        <div class="hero-stat-label">安全施工達成率</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num" data-count="2" data-suffix="拠点">0拠点</div>
+        <div class="hero-stat-label">東京都内</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span>SCROLL</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+<!-- ================================================================
+     STATS BAR
+================================================================ -->
+<section id="stats" aria-label="数字で見る公雅建設">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item reveal">
+        <div class="stat-num" data-count="350" data-suffix="+">350+</div>
+        <div class="stat-label">累計施工件数</div>
+      </div>
+      <div class="stat-item reveal" style="--delay:0.1s">
+        <div class="stat-num" data-count="5000" data-suffix="千円">5,000千円</div>
+        <div class="stat-label">資本金</div>
+      </div>
+      <div class="stat-item reveal" style="--delay:0.2s">
+        <div class="stat-num" data-count="20" data-suffix="年">20年</div>
+        <div class="stat-label">業界経験</div>
+      </div>
+      <div class="stat-item reveal" style="--delay:0.3s">
+        <div class="stat-num" data-count="0" data-suffix="件">0件</div>
+        <div class="stat-label">重大事故（直近5年）</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     SERVICES (事業内容)
+================================================================ -->
+<section id="services" class="section-wrap" aria-labelledby="services-title">
+  <div class="container">
+    <p class="section-label">Services</p>
+    <h2 class="section-title" id="services-title">
+      多様な建設ニーズに<span class="accent">一貫対応</span>
+    </h2>
+    <p class="section-subtitle">
+      足場仮設から大規模な土工事・解体まで、各分野の専門職人チームが連携し、高品質・高安全の施工を提供します。
+    </p>
+
+    <div class="services-grid">
+      <article class="service-card stagger-item" style="--delay:0s">
+        <div class="service-icon" aria-hidden="true">🏗️</div>
+        <h3>足場仮設工事</h3>
+        <p>枠組足場・くさび緊結式足場・吊り足場など多様な工法に対応。高所作業の安全確保から飛散防止ネットの設置まで、建物外装工事の基盤を担います。</p>
+        <span class="service-tag">Scaffolding</span>
+      </article>
+
+      <article class="service-card stagger-item" style="--delay:0.08s">
+        <div class="service-icon" aria-hidden="true">⚙️</div>
+        <h3>杭打ち工事</h3>
+        <p>PHC杭・鋼管杭など様々な杭種に対応。地盤調査データを精密に解析し、建物を支える強固な基礎を形成。施工精度の高さに自信を持っています。</p>
+        <span class="service-tag">Pile Foundation</span>
+      </article>
+
+      <article class="service-card stagger-item" style="--delay:0.16s">
+        <div class="service-icon" aria-hidden="true">🚜</div>
+        <h3>掘削・土工事</h3>
+        <p>基礎工事から大規模な造成工事まで対応。最新鋭の重機を駆使し、地山保護・山留め工事も含めた安全で効率的な掘削・盛土工事を実施します。</p>
+        <span class="service-tag">Earthwork</span>
+      </article>
+
+      <article class="service-card stagger-item" style="--delay:0.24s">
+        <div class="service-icon" aria-hidden="true">🏛️</div>
+        <h3>コンクリート工事</h3>
+        <p>基礎コンクリートから擁壁・土留壁まで、高品質なコンクリート打設を提供。材料管理・養生・品質検査まで一貫した施工管理で高い完成度を実現します。</p>
+        <span class="service-tag">Concrete Work</span>
+      </article>
+
+      <article class="service-card stagger-item" style="--delay:0.32s">
+        <div class="service-icon" aria-hidden="true">🌿</div>
+        <h3>外構工事</h3>
+        <p>ブロック積み・フェンス・門扉・舗装・排水工事など、建物周辺の外構を総合的に対応。機能性と美観を両立した仕上がりで、住まいや施設の価値を高めます。</p>
+        <span class="service-tag">Exterior</span>
+      </article>
+
+      <article class="service-card stagger-item" style="--delay:0.4s">
+        <div class="service-icon" aria-hidden="true">🔨</div>
+        <h3>解体工事</h3>
+        <p>木造・鉄骨・RC造を問わず、法令に則った安全確実な解体を実施。アスベスト等有害物質の適正処理から廃材分別・処分まで環境に配慮した解体を行います。</p>
+        <span class="service-tag">Demolition</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ================================================================
+     WORKS (施工実績)
+================================================================ -->
+<section id="works" class="section-wrap" aria-labelledby="works-title">
+  <div class="container">
+    <p class="section-label">Works</p>
+    <h2 class="section-title" id="works-title">
+      確かな技術が残す<span class="accent">施工実績</span>
+    </h2>
+    <p class="section-subtitle">
+      府中市・八王子市を中心に、東京都内各地で多様な施工実績を積み重ねてきました。
+    </p>
+
+    <div id="works-grid" aria-label="施工実績一覧">
+      <!-- JSで描画 -->
+    </div>
+  </div>
+</section>
+
+<!-- Works Modal -->
+<div id="work-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button id="modal-close" class="modal-close-btn" aria-label="閉じる">✕</button>
+    <div class="modal-img" id="modal-img"></div>
+    <div class="modal-body">
+      <span id="modal-category" class="work-category"></span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-meta"></p>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+</div>
+
+<div class="section-divider"></div>
+
+<!-- ================================================================
+     ESTIMATE (簡単見積もり)
+================================================================ -->
+<section id="estimate" class="section-wrap" aria-labelledby="estimate-title">
+  <div class="container">
+    <p class="section-label">Quick Estimate</p>
+    <h2 class="section-title" id="estimate-title">
+      かんたん<span class="accent">概算見積もり</span>
+    </h2>
+    <p class="section-subtitle">
+      工事の種別・規模を入力するだけで、概算の費用感を即座に確認できます。
+    </p>
+
+    <div class="estimate-wrap">
+      <!-- 入力フォーム -->
+      <div class="estimate-form-box reveal-left">
+        <form id="estimate-form" aria-label="概算見積もりフォーム" novalidate>
+          <div class="est-field">
+            <label for="est-type">工事種別</label>
+            <select id="est-type" name="type" aria-required="true">
+              <option value="">-- 選択してください --</option>
+              <option value="scaffold">足場仮設工事</option>
+              <option value="earthwork">土工事・掘削</option>
+              <option value="concrete">コンクリート工事</option>
+              <option value="exterior">外構工事</option>
+              <option value="demolition">解体工事</option>
+              <option value="pile">杭打ち工事</option>
+            </select>
+          </div>
+
+          <div class="est-field">
+            <label for="est-size">規模（㎡ / m³ / 本）</label>
+            <input type="number" id="est-size" name="size" placeholder="例: 200" min="1" step="1" aria-required="true">
+          </div>
+
+          <div class="est-field" id="est-floors-wrap">
+            <label for="est-floors">建物階数（足場の場合）</label>
+            <input type="number" id="est-floors" name="floors" value="3" min="1" max="50" step="1">
+          </div>
+
+          <div class="est-field">
+            <label>オプション</label>
+            <div class="est-checkboxes">
+              <label class="est-checkbox" for="est-night">
+                <input type="checkbox" id="est-night" name="night">
+                <span class="est-check-box"></span>
+                夜間工事
+              </label>
+              <label class="est-checkbox" for="est-urgent">
+                <input type="checkbox" id="est-urgent" name="urgent">
+                <span class="est-check-box"></span>
+                急ぎ対応
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- 結果表示 -->
+      <div class="estimate-result-box reveal-right">
+        <h3 class="estimate-result-title">概算金額</h3>
+        <p class="estimate-result-sub">条件を入力すると、リアルタイムで概算が表示されます。</p>
+        <div id="estimate-result" aria-live="polite">
+          <p class="est-hint">工事種別と規模を入力すると概算金額が表示されます。</p>
+        </div>
+        <div style="margin-top:24px;">
+          <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;">
+            正式なお見積もりを依頼する →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ================================================================
+     ABOUT / COMPANY INFO
+================================================================ -->
+<section id="about" class="section-wrap" aria-labelledby="about-title">
+  <div class="container">
+    <p class="section-label">About Us</p>
+    <h2 class="section-title" id="about-title">
+      会社<span class="accent">概要</span>
+    </h2>
+
+    <div class="about-grid">
+      <!-- 挨拶文 -->
+      <div class="about-text reveal-left">
+        <h2 class="section-title" style="font-size:1.6rem;margin-bottom:16px;">
+          建設の力で、<br>未来の街をデザインする。
+        </h2>
+        <p>
+          株式会社公雅建設は、東京都府中市を拠点に、とび・土工工事を中核とした総合建設業を営んでいます。代表・田原春 公之のもと、熟練の技術者たちが一丸となり、日々の現場に向き合っています。
+        </p>
+        <p>
+          私たちが大切にするのは「安全・品質・誠実」の三原則。どんな工事規模であっても、現場の安全管理を最優先に、お客様の期待を上回る品質で仕上げることを約束します。
+        </p>
+        <p>
+          府中市・八王子市を中心に培ってきた地域密着の信頼と、最新技術を組み合わせることで、建設業界の常識を超えた価値を創出し続けています。
+        </p>
+        <div style="margin-top:28px;">
+          <a href="#contact" class="btn-outline">お問い合わせはこちら</a>
+        </div>
+      </div>
+
+      <!-- 会社概要テーブル -->
+      <div class="reveal-right">
+        <div class="company-table-wrap">
+          <table class="company-table" aria-label="会社概要">
+            <tbody>
+              <tr>
+                <th scope="row">会社名</th>
+                <td>株式会社公雅建設</td>
+              </tr>
+              <tr>
+                <th scope="row">代表者</th>
+                <td>田原春 公之（タハラバル キミユキ）</td>
+              </tr>
+              <tr>
+                <th scope="row">本社所在地</th>
+                <td>〒183-0013<br>東京都府中市小柳町1-20-1<br>サンズ細野301</td>
+              </tr>
+              <tr>
+                <th scope="row">第二拠点</th>
+                <td>〒192-0354<br>東京都八王子市松が谷17</td>
+              </tr>
+              <tr>
+                <th scope="row">電話番号</th>
+                <td><a href="tel:0423605114">042-360-5114</a></td>
+              </tr>
+              <tr>
+                <th scope="row">資本金</th>
+                <td>5,000千円</td>
+              </tr>
+              <tr>
+                <th scope="row">建設業許可</th>
+                <td>東京都知事許可<br>第143593号</td>
+              </tr>
+              <tr>
+                <th scope="row">業務内容</th>
+                <td>とび・土工工事業<br>（足場仮設、杭打ち、掘削・土工事、コンクリート工事、外構・解体工事）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Maps -->
+    <div class="maps-section reveal">
+      <h3 style="font-size:1.2rem;font-weight:700;color:var(--clr-white);margin-bottom:20px;">アクセスマップ</h3>
+      <div class="map-tabs" role="tablist" aria-label="拠点選択">
+        <button class="map-tab-btn active" data-target="map-honsha" role="tab" aria-selected="true" aria-controls="map-honsha">
+          📍 本社（府中市）
+        </button>
+        <button class="map-tab-btn" data-target="map-hachioji" role="tab" aria-selected="false" aria-controls="map-hachioji">
+          📍 第二拠点（八王子市）
+        </button>
+      </div>
+
+      <div id="map-honsha" class="map-pane active" role="tabpanel" aria-labelledby="tab-honsha">
+        <iframe
+          src="https://www.google.com/maps?q=東京都府中市小柳町1-20-1&output=embed"
+          width="100%" height="380"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="本社：東京都府中市小柳町1-20-1 サンズ細野301"
+          aria-label="本社の地図"></iframe>
+        <p class="map-label">
+          <span>📌</span>
+          東京都府中市小柳町1-20-1 サンズ細野301（本社）
+        </p>
+      </div>
+
+      <div id="map-hachioji" class="map-pane" role="tabpanel" aria-labelledby="tab-hachioji">
+        <iframe
+          src="https://www.google.com/maps?q=東京都八王子市松が谷17&output=embed"
+          width="100%" height="380"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="第二拠点：東京都八王子市松が谷17"
+          aria-label="第二拠点の地図"></iframe>
+        <p class="map-label">
+          <span>📌</span>
+          東京都八王子市松が谷17（第二拠点）
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ================================================================
+     CONTACT (お問い合わせ)
+================================================================ -->
+<section id="contact" class="section-wrap" aria-labelledby="contact-title">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title" id="contact-title">
+      お気軽に<span class="accent">ご相談ください</span>
+    </h2>
+
+    <div class="contact-wrap">
+      <!-- 連絡先情報 -->
+      <div class="contact-info reveal-left">
+        <h2 class="section-title" style="font-size:1.5rem;">まずはご相談から。</h2>
+        <p>
+          工事のご依頼・お見積もり・ご不明点など、どんなことでもお気軽にお問い合わせください。担当者が丁寧にご対応いたします。
+        </p>
+
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-card-icon" aria-hidden="true">📞</div>
+            <div>
+              <div class="contact-card-label">電話でのお問い合わせ</div>
+              <div class="contact-card-value">
+                <a href="tel:0423605114">042-360-5114</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="contact-card-label">本社所在地</div>
+              <div class="contact-card-value" style="font-size:0.85rem;">
+                〒183-0013 東京都府中市小柳町1-20-1
+              </div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-card-icon" aria-hidden="true">🕐</div>
+            <div>
+              <div class="contact-card-label">営業時間</div>
+              <div class="contact-card-value" style="font-size:0.85rem;">
+                平日 8:00〜18:00（土曜応相談）
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- フォーム -->
+      <div class="reveal-right">
+        <div class="form-box" id="contact-form-wrap">
+          <form id="contact-form" novalidate aria-label="お問い合わせフォーム">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-name">お名前<span class="req" aria-label="必須">*</span></label>
+                <input type="text" id="f-name" name="name" placeholder="山田 太郎" autocomplete="name" aria-required="true">
+                <p class="form-error" role="alert" aria-live="polite"></p>
+              </div>
+              <div class="form-group">
+                <label for="f-company">会社名<span style="font-size:0.7rem;color:var(--clr-muted);margin-left:4px;">任意</span></label>
+                <input type="text" id="f-company" name="company" placeholder="株式会社〇〇" autocomplete="organization">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="f-tel">電話番号<span class="req" aria-label="必須">*</span></label>
+                <input type="tel" id="f-tel" name="tel" placeholder="042-000-0000" autocomplete="tel" aria-required="true">
+                <p class="form-error" role="alert" aria-live="polite"></p>
+              </div>
+              <div class="form-group">
+                <label for="f-email">メールアドレス<span class="req" aria-label="必須">*</span></label>
+                <input type="email" id="f-email" name="email" placeholder="example@email.com" autocomplete="email" aria-required="true">
+                <p class="form-error" role="alert" aria-live="polite"></p>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="f-message">お問い合わせ内容<span class="req" aria-label="必須">*</span></label>
+              <textarea id="f-message" name="message" rows="5" placeholder="工事の概要・場所・ご要望などをご記入ください。" aria-required="true"></textarea>
+              <p class="form-error" role="alert" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" class="btn-submit">送信する</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================================
+     FOOTER
+================================================================ -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">KOGA KENSETSU</div>
+        <p>
+          株式会社公雅建設は「安全・品質・誠実」を旗印に、東京都府中市・八王子市を拠点として地域の建設インフラを支え続けています。
+        </p>
+        <div class="footer-license">
+          <strong>許可番号：</strong>東京都知事許可 第143593号
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="サイトマップ">
+        <h4>NAVIGATION</h4>
+        <ul>
+          <li><a href="#services">事業内容</a></li>
+          <li><a href="#works">施工実績</a></li>
+          <li><a href="#estimate">簡単見積もり</a></li>
+          <li><a href="#about">会社概要</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-col">
+        <h4>CONTACT</h4>
+        <address class="footer-address" style="font-style:normal;">
+          <strong>本社</strong>
+          〒183-0013<br>
+          東京都府中市小柳町1-20-1<br>
+          サンズ細野301
+          <br><br>
+          <strong>第二拠点</strong>
+          〒192-0354<br>
+          東京都八王子市松が谷17
+          <br><br>
+          <a href="tel:0423605114">📞 042-360-5114</a>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">
+        &copy; 2025 株式会社公雅建設. All Rights Reserved. | 東京都知事許可 第143593号
+      </p>
+      <div class="footer-bottom-links">
+        <a href="#hero">トップへ</a>
+        <a href="#about">会社概要</a>
+        <a href="#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="back-to-top" aria-label="ページトップへ戻る">↑</button>
+
+<script>
+// Back to top
+const btt = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  btt.classList.toggle('visible', window.scrollY > 400);
+});
+btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+</script>
+
+<script src="js/works-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

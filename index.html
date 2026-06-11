@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社公雅建設 HPデザイン案 全10バリエーション</title>
+<meta name="description" content="株式会社公雅建設 ホームページデザイン案の比較ギャラリー">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; background:#f0f2f5; color:#1a1a2e; }
+  header { background:#1a1a2e; color:#fff; padding:48px 24px; text-align:center; }
+  header h1 { font-size:1.6rem; margin-bottom:8px; }
+  header p { opacity:.8; font-size:.95rem; }
+  .grid { max-width:1280px; margin:40px auto; padding:0 24px; display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:28px; }
+  .card { background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.08); transition:transform .2s, box-shadow .2s; display:flex; flex-direction:column; }
+  .card:hover { transform:translateY(-4px); box-shadow:0 8px 24px rgba(0,0,0,.15); }
+  .preview { position:relative; height:240px; overflow:hidden; background:#ddd; }
+  .preview iframe { width:1200px; height:800px; border:0; transform:scale(.3333); transform-origin:0 0; pointer-events:none; }
+  .preview a { position:absolute; inset:0; }
+  .info { padding:18px 20px 22px; }
+  .info .num { font-size:.75rem; color:#888; letter-spacing:.1em; }
+  .info h2 { font-size:1.1rem; margin:4px 0 6px; }
+  .info p { font-size:.85rem; color:#555; line-height:1.6; }
+  .info .btn { display:inline-block; margin-top:12px; padding:8px 20px; background:#1a1a2e; color:#fff; text-decoration:none; border-radius:6px; font-size:.85rem; }
+  .info .btn:hover { background:#3b3b6b; }
+  footer { text-align:center; padding:32px; color:#888; font-size:.8rem; }
+  @media (max-width:480px){ .grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>株式会社公雅建設 ホームページデザイン案</h1>
+  <p>全10バリエーション ― カードをクリックすると各デザインをご覧いただけます</p>
+</header>
+<main class="grid" id="grid"></main>
+<footer>株式会社公雅建設 HPデザイン提案 ― 各案ともレスポンシブ対応／施工実績／お問い合わせフォーム／簡単見積もり／Googleマップ搭載</footer>
+<script>
+const SITES = [
+  ["v01","王道コーポレート","ネイビー×白。信頼感と誠実さを重視した正統派の企業サイト。"],
+  ["v02","和モダン","生成り×墨色×朱。縦書きを活かした、職人の矜持を感じる上質デザイン。"],
+  ["v03","現場系・力強い","黒×セーフティイエロー。安全ストライプと極太ゴシックのインパクト重視。"],
+  ["v04","ミニマル","白基調・余白重視。タイポグラフィで魅せる建築事務所風の洗練デザイン。"],
+  ["v05","ダークラグジュアリー","黒×金。大判ヒーローとフェードイン演出による重厚・高級路線。"],
+  ["v06","グリーン×サステナブル","環境共生・地域貢献を打ち出す緑基調の温かいデザイン。"],
+  ["v07","エディトリアル","業界誌のような大胆なタイポグラフィと非対称グリッドの雑誌風。"],
+  ["v08","ブルータリズム","コンクリート打ちっぱなしの無骨さ。とび・土工の仕事と響き合う構成。"],
+  ["v09","クラフト・温かみ","丸み×暖色×手描き風。地域密着の人柄が伝わるフレンドリー路線。"],
+  ["v10","次世代テック","グラデーション×アニメーション。建設×テクノロジーの先進性を演出。"],
+];
+document.getElementById("grid").innerHTML = SITES.map(([dir,name,desc],i)=>`
+  <article class="card">
+    <div class="preview">
+      <iframe src="${dir}/index.html" loading="lazy" tabindex="-1" title="${name}プレビュー"></iframe>
+      <a href="${dir}/index.html" aria-label="${name}を開く"></a>
+    </div>
+    <div class="info">
+      <div class="num">DESIGN ${String(i+1).padStart(2,"0")}</div>
+      <h2>${name}</h2>
+      <p>${desc}</p>
+      <a class="btn" href="${dir}/index.html">このデザインを見る →</a>
+    </div>
+  </article>`).join("");
+</script>
+</body>
+</html>
