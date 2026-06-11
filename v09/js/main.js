@@ -1,6 +1,6 @@
 // お問い合わせフォームの送信先エンドポイント
 // Formspree等のURLを設定すると実送信されます（例: "https://formspree.io/f/xxxxxxxx"）
-const CONTACT_ENDPOINT = "";
+const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/edberg927@gmail.com"; // FormSubmit経由で edberg927@gmail.com に送信（初回送信時に届く認証メールのリンクをクリックで有効化）
 
 // =============================================
 // ハンバーガーメニュー
