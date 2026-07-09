@@ -83,6 +83,89 @@
   </div>
 </section>
 
+<!-- 施工写真ギャラリー -->
+<section class="section photo-gallery" aria-label="施工写真ギャラリー" style="background:#f4f1ea;">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Site Photos</p>
+      <h2 class="section-title">施工写真ギャラリー</h2>
+      <p class="section-lead">実際の現場で撮影した写真です。写真をクリックすると拡大表示できます。橋梁架設・揚重・夜間一括架設など、当社が携わった工事の様子をご覧ください。</p>
+    </div>
+    <div class="pgrid" id="pgrid"></div>
+  </div>
+</section>
+
+<!-- ライトボックス -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="施工写真の拡大表示">
+  <button type="button" class="lb__close" aria-label="閉じる">✕</button>
+  <button type="button" class="lb__nav lb__prev" aria-label="前の写真">‹</button>
+  <figure class="lb__figure">
+    <img class="lb__img" src="" alt="">
+    <figcaption class="lb__cap"></figcaption>
+  </figure>
+  <button type="button" class="lb__nav lb__next" aria-label="次の写真">›</button>
+</div>
+
+<style>
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;}
+.pgrid figure{margin:0;position:relative;overflow:hidden;border-radius:6px;cursor:pointer;background:#ddd;aspect-ratio:4/3;}
+.pgrid img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+.pgrid figure:hover img{transform:scale(1.06);}
+.pgrid figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 8px;color:#fff;font-size:.78rem;line-height:1.4;background:linear-gradient(transparent,rgba(0,0,0,.72));opacity:0;transition:opacity .3s;}
+.pgrid figure:hover figcaption,.pgrid figure:focus-within figcaption{opacity:1;}
+.lightbox{position:fixed;inset:0;z-index:10000;background:rgba(15,13,10,.94);display:none;align-items:center;justify-content:center;padding:24px;}
+.lightbox.is-open{display:flex;}
+.lb__figure{margin:0;max-width:92vw;max-height:88vh;text-align:center;}
+.lb__img{max-width:92vw;max-height:80vh;object-fit:contain;border-radius:4px;box-shadow:0 10px 40px rgba(0,0,0,.5);}
+.lb__cap{color:#f2e9d6;margin-top:14px;font-size:.95rem;}
+.lb__close{position:absolute;top:18px;right:22px;background:none;border:0;color:#fff;font-size:2rem;cursor:pointer;line-height:1;}
+.lb__nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.12);border:0;color:#fff;font-size:2.4rem;width:56px;height:56px;border-radius:50%;cursor:pointer;line-height:1;}
+.lb__prev{left:18px;} .lb__next{right:18px;}
+.lb__nav:hover{background:rgba(255,255,255,.25);}
+@media(max-width:600px){.lb__nav{width:44px;height:44px;font-size:1.8rem;}.lb__prev{left:6px;}.lb__next{right:6px;}}
+</style>
+
+<script>
+(function(){
+  var PHOTOS=[
+    {src:"images/g_gotemba_1.jpg",cap:"御殿場ジャンクション｜多軸台車による桁運搬"},
+    {src:"images/g_gotemba_2.jpg",cap:"御殿場ジャンクション｜桁の搬入"},
+    {src:"images/g_gotemba_3.jpg",cap:"御殿場ジャンクション｜クレーンによる桁架設"},
+    {src:"images/g_yamada_1.jpg",cap:"山田川橋｜鋼桁上での高所作業"},
+    {src:"images/g_yamada_2.jpg",cap:"山田川橋｜夜間一括架設"},
+    {src:"images/g_yamada_3.jpg",cap:"山田川橋｜遮音壁・付属設備の設置"},
+    {src:"images/g_ebina_1.jpg",cap:"海老名北ジャンクション｜橋脚と架設状況"},
+    {src:"images/g_ebina_2.jpg",cap:"海老名北ジャンクション｜鋼箱桁の据付"},
+    {src:"images/g_ebina_3.jpg",cap:"海老名北ジャンクション｜寸法・精度の確認"},
+    {src:"images/g_jfe_1.jpg",cap:"製鉄所構内｜フローティングクレーンによる揚重"},
+    {src:"images/g_jfe_2.jpg",cap:"製鉄所構内｜大型クローラークレーン"},
+    {src:"images/g_kitajukken_1.jpg",cap:"北十間人道橋｜完成（空撮）"},
+    {src:"images/g_kawana_1.jpg",cap:"川名宮川橋｜鋼桁の仮置き"},
+    {src:"images/g_kawana_2.jpg",cap:"川名宮川橋｜桁連結部の施工"},
+    {src:"images/g_kawana_3.jpg",cap:"川名宮川橋｜送り出し架設"}
+  ];
+  var grid=document.getElementById("pgrid");
+  if(grid){
+    grid.innerHTML=PHOTOS.map(function(p,i){
+      return '<figure data-i="'+i+'" tabindex="0"><img src="'+p.src+'" alt="'+p.cap+'" loading="lazy"><figcaption>'+p.cap+'</figcaption></figure>';
+    }).join("");
+  }
+  var lb=document.getElementById("lightbox");
+  var lbImg=lb.querySelector(".lb__img"), lbCap=lb.querySelector(".lb__cap");
+  var cur=0;
+  function show(i){cur=(i+PHOTOS.length)%PHOTOS.length;lbImg.src=PHOTOS[cur].src;lbImg.alt=PHOTOS[cur].cap;lbCap.textContent=PHOTOS[cur].cap;}
+  function open(i){show(i);lb.classList.add("is-open");lb.setAttribute("aria-hidden","false");}
+  function close(){lb.classList.remove("is-open");lb.setAttribute("aria-hidden","true");lbImg.src="";}
+  if(grid){grid.addEventListener("click",function(e){var f=e.target.closest("figure");if(f)open(+f.dataset.i);});
+    grid.addEventListener("keydown",function(e){var f=e.target.closest("figure");if(f&&(e.key==="Enter"||e.key===" ")){e.preventDefault();open(+f.dataset.i);}});}
+  lb.querySelector(".lb__close").addEventListener("click",close);
+  lb.querySelector(".lb__prev").addEventListener("click",function(){show(cur-1);});
+  lb.querySelector(".lb__next").addEventListener("click",function(){show(cur+1);});
+  lb.addEventListener("click",function(e){if(e.target===lb)close();});
+  document.addEventListener("keydown",function(e){if(!lb.classList.contains("is-open"))return;if(e.key==="Escape")close();else if(e.key==="ArrowLeft")show(cur-1);else if(e.key==="ArrowRight")show(cur+1);});
+})();
+</script>
+
 <!-- CTA -->
 <section class="cta" aria-label="お問い合わせ">
   <div class="container cta__inner">
