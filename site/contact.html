@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>お問い合わせ｜株式会社公雅建設 — 工事のご相談・お見積もり</title>
+<meta name="description" content="株式会社公雅建設へのお問い合わせページ。橋梁架設・鉄骨組立て・足場・揚重工事のご相談、お見積もり、採用への応募はこちらから。電話042-360-5114（受付8:00〜17:00）。">
+<meta property="og:title" content="お問い合わせ｜株式会社公雅建設">
+<meta property="og:description" content="工事のご相談・お見積もり・採用応募はこちらから。">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=EB+Garamond:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <svg class="loader__crane" viewBox="0 0 200 210" fill="none" aria-hidden="true">
+      <path d="M10 24H190M100 24V10M64 10h72" stroke="currentColor" stroke-width="3"/>
+      <path class="loader__rope" d="M100 24v54" stroke="currentColor" stroke-width="2"/>
+      <g class="loader__lift">
+        <path d="M100 78l-26 28M100 78l26 28" stroke="currentColor" stroke-width="2"/>
+        <g transform="translate(100 144)">
+          <path d="M-40 -4L-4 -40M4 -40L40 -4M40 4L4 40M-4 40L-40 4" stroke="currentColor" stroke-width="6"/>
+          <rect x="-16" y="-16" width="32" height="32" fill="#28221a"/>
+          <text x="0" y="9" text-anchor="middle" font-size="23" font-family="'Shippori Mincho B1',serif" font-weight="700" fill="#f2e9d6">春</text>
+        </g>
+      </g>
+    </svg>
+    <p class="loader__name">株式会社公雅建設</p>
+    <p class="loader__en">KOUGA KENSETSU</p>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M8 46L46 8M54 8L92 46M92 54L54 92M46 92L8 54" stroke="currentColor" stroke-width="7" fill="none"/>
+        <text x="50" y="62" text-anchor="middle" font-size="34" font-family="'Shippori Mincho B1',serif" font-weight="700" fill="currentColor">春</text>
+      </svg>
+      <span>
+        <span class="name">株式会社公雅建設</span>
+        <span class="tagline">KOUGA KENSETSU</span>
+      </span>
+    </a>
+    <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <a href="index.html">ホーム</a>
+      <a href="service.html">事業内容</a>
+      <a href="works.html">施工実績</a>
+      <a href="company.html">会社概要</a>
+      <a href="recruit.html">採用情報</a>
+      <a href="contact.html" class="gnav__cta">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="page-header">
+  <div class="page-header__bg" style="background-image:url('images/hero_yamada.jpg')" aria-hidden="true"></div>
+  <div class="container">
+    <p class="page-header__label">Contact</p>
+    <h1 class="page-header__title">お問い合わせ</h1>
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">ホーム</a><span class="sep">/</span>お問い合わせ
+    </nav>
+  </div>
+</div>
+
+<section class="section" aria-label="お問い合わせ方法">
+  <div class="container container--narrow">
+    <div class="section-header center reveal">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">ご相談・お見積もり・採用応募</h2>
+      <p class="section-lead">工事のご相談は、重さ・大きさ・場所・時期など、わかる範囲の情報で構いません。現場の条件をお伺いしたうえで、最適な工法とお見積もりをご提案します。</p>
+    </div>
+
+    <div class="contact-tel reveal">
+      <p class="contact-tel__label">お急ぎの方はお電話で</p>
+      <p class="contact-tel__num"><a href="tel:0423605114">042-360-5114</a></p>
+      <p class="contact-tel__note">受付時間 8:00〜17:00（日曜定休）／「ホームページを見た」とお伝えいただくとスムーズです</p>
+    </div>
+
+    <form class="form reveal" id="contact-form" novalidate>
+      <div class="form__row">
+        <label class="form__label" for="f-name">お名前<span class="req">必須</span></label>
+        <input type="text" id="f-name" name="name" autocomplete="name" placeholder="例）山田 太郎">
+        <p class="form__error"></p>
+      </div>
+      <div class="form__row">
+        <label class="form__label" for="f-company">会社名<span class="opt">任意</span></label>
+        <input type="text" id="f-company" name="company" autocomplete="organization" placeholder="例）株式会社○○">
+      </div>
+      <div class="form__row">
+        <label class="form__label" for="f-tel">電話番号<span class="req">必須</span></label>
+        <input type="tel" id="f-tel" name="tel" autocomplete="tel" placeholder="例）090-1234-5678">
+        <p class="form__error"></p>
+      </div>
+      <div class="form__row">
+        <label class="form__label" for="f-email">メールアドレス<span class="req">必須</span></label>
+        <input type="email" id="f-email" name="email" autocomplete="email" placeholder="例）info@example.com">
+        <p class="form__error"></p>
+      </div>
+      <div class="form__row">
+        <label class="form__label" for="f-type">お問い合わせ種別<span class="opt">任意</span></label>
+        <select id="f-type" name="type">
+          <option value="工事のご相談・お見積もり">工事のご相談・お見積もり</option>
+          <option value="採用への応募">採用への応募</option>
+          <option value="その他">その他</option>
+        </select>
+      </div>
+      <div class="form__row">
+        <label class="form__label" for="f-message">お問い合わせ内容<span class="req">必須</span></label>
+        <textarea id="f-message" name="message" placeholder="例）工場設備の揚重・移設を検討しています。現地調査とお見積もりをお願いできますか。"></textarea>
+        <p class="form__error"></p>
+      </div>
+      <div class="form__submit">
+        <button type="submit" class="btn btn--primary">送信する <span class="arrow">→</span></button>
+      </div>
+      <p class="form__result" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- よくある質問 -->
+<section class="section section--alt" aria-labelledby="faq-heading">
+  <div class="container container--narrow">
+    <div class="section-header center reveal">
+      <p class="section-label">FAQ</p>
+      <h2 class="section-title" id="faq-heading">よくある質問</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>どのくらいの重さ・高さまで対応できますか？</summary>
+        <p class="faq-item__a">超高層ビルの屋上への設備揚重など、高さのある現場を数多く手がけており、揚重できる高さに上限はありません。重量・寸法・設置場所の条件によって工法が変わりますので、まずは現場の状況をお聞かせください。</p>
+      </details>
+      <details class="faq-item">
+        <summary>見積もりだけでもお願いできますか？</summary>
+        <p class="faq-item__a">はい、ご相談ください。現場の条件（工事の種類・重量物の重さ・搬入経路・時期など）をお伺いしたうえで、お見積もりをご提案します。ご相談の段階でわからない項目があっても問題ありません。</p>
+      </details>
+      <details class="faq-item">
+        <summary>小さな工事でも頼めますか？</summary>
+        <p class="faq-item__a">もちろん対応いたします。機械1台の揚重・移設から、橋梁架設のような大規模工事まで、規模を問わずお引き受けしています。</p>
+      </details>
+      <details class="faq-item">
+        <summary>夜間や休日の作業はできますか？</summary>
+        <p class="faq-item__a">対応可能です。夜間の交通規制内での橋梁架設をはじめ、稼働中の工場や営業中の施設など、日中に作業できない現場での夜間・早朝・休日施工を数多く行っています。</p>
+      </details>
+      <details class="faq-item">
+        <summary>対応エリアはどこまでですか？</summary>
+        <p class="faq-item__a">東京都府中市・八王子市の拠点を中心に、関東近郊で対応しています。これまでに静岡県や神奈川県などの現場実績もあり、内容によって遠方もお受けできる場合がありますので、お気軽にご相談ください。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M8 46L46 8M54 8L92 46M92 54L54 92M46 92L8 54" stroke="currentColor" stroke-width="7" fill="none"/>
+          <text x="50" y="62" text-anchor="middle" font-size="34" font-family="'Shippori Mincho B1',serif" font-weight="700" fill="currentColor">春</text>
+        </svg>
+        <div>
+          <p class="footer__name">株式会社公雅建設</p>
+          <p class="footer__addr">
+            〒183-0013 東京都府中市小柳町1-20-1 サンズ細野301<br>
+            【八王子拠点】〒192-0354 東京都八王子市松が谷17-1-809<br>
+            TEL：<a href="tel:0423605114" style="color:inherit;">042-360-5114</a>（受付 8:00〜17:00）
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">Menu</p>
+        <ul class="footer__nav">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="service.html">事業内容</a></li>
+          <li><a href="works.html">施工実績</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">License</p>
+        <p class="footer__addr">建設業許可<br>東京都知事許可（般-27）第143593号</p>
+      </div>
+    </div>
+    <div class="footer__bottom">&copy; 株式会社公雅建設 All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="js/works-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>株式会社公雅建設｜橋梁架設・鉄骨組立て・足場・重量物揚重</title>
+<meta name="description" content="株式会社公雅建設は、橋梁架設・鉄骨組立て・足場・一般建築を手がける東京の建設会社です。重量物を高所へ吊り上げる揚重工事を強みに、大型インフラから工場設備まで確かな技術でお応えします。">
+<meta property="og:title" content="株式会社公雅建設｜橋梁架設・鉄骨組立て・足場・重量物揚重">
+<meta property="og:description" content="その重さを、望む高さまで。橋梁架設と高所揚重のプロフェッショナル。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=EB+Garamond:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- ローディング演出: クレーンがロゴを吊り上げる -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <svg class="loader__crane" viewBox="0 0 200 210" fill="none" aria-hidden="true">
+      <path d="M10 24H190M100 24V10M64 10h72" stroke="currentColor" stroke-width="3"/>
+      <path class="loader__rope" d="M100 24v54" stroke="currentColor" stroke-width="2"/>
+      <g class="loader__lift">
+        <path d="M100 78l-26 28M100 78l26 28" stroke="currentColor" stroke-width="2"/>
+        <g transform="translate(100 144)">
+          <path d="M-40 -4L-4 -40M4 -40L40 -4M40 4L4 40M-4 40L-40 4" stroke="currentColor" stroke-width="6"/>
+          <rect x="-16" y="-16" width="32" height="32" fill="#28221a"/>
+          <text x="0" y="9" text-anchor="middle" font-size="23" font-family="'Shippori Mincho B1',serif" font-weight="700" fill="#f2e9d6">春</text>
+        </g>
+      </g>
+    </svg>
+    <p class="loader__name">株式会社公雅建設</p>
+    <p class="loader__en">KOUGA KENSETSU</p>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M8 46L46 8M54 8L92 46M92 54L54 92M46 92L8 54" stroke="currentColor" stroke-width="7" fill="none"/>
+        <text x="50" y="62" text-anchor="middle" font-size="34" font-family="'Shippori Mincho B1',serif" font-weight="700" fill="currentColor">春</text>
+      </svg>
+      <span>
+        <span class="name">株式会社公雅建設</span>
+        <span class="tagline">KOUGA KENSETSU</span>
+      </span>
+    </a>
+    <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <a href="index.html">ホーム</a>
+      <a href="service.html">事業内容</a>
+      <a href="works.html">施工実績</a>
+      <a href="company.html">会社概要</a>
+      <a href="recruit.html">採用情報</a>
+      <a href="contact.html" class="gnav__cta">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ヒーロー（実写スライドショー） -->
+<section class="hero" aria-label="メインビジュアル">
+  <!-- 動画を使う場合は .hero__slides を <video autoplay muted loop playsinline> に差し替え可能 -->
+  <div class="hero__slides" aria-hidden="true">
+    <div class="hero__slide is-active" style="background-image:url('images/hero_gotemba.jpg')"></div>
+    <div class="hero__slide" style="background-image:url('images/hero_jfe.jpg')"></div>
+    <div class="hero__slide" style="background-image:url('images/hero_ebina.jpg')"></div>
+    <div class="hero__slide" style="background-image:url('images/hero_yamada.jpg')"></div>
+  </div>
+  <div class="hero__cover" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <div class="container">
+      <p class="hero__label fade-line">KOUGA KENSETSU</p>
+      <h1 class="hero__title">
+        <span class="fade-line">その重さを、</span><br>
+        <span class="fade-line">望む<span class="accent">高さ</span>まで。</span>
+      </h1>
+      <p class="hero__lead fade-line">
+        橋梁架設、鉄骨組立て、足場、一般建築。株式会社公雅建設は、重量物を高所へ吊り上げる「揚重」の技術を強みに、大型インフラの現場から工場設備まで、確かな技と段取りでお応えします。
+      </p>
+      <div class="hero__btns">
+        <a href="service.html" class="btn btn--primary">事業内容を見る <span class="arrow">→</span></a>
+        <a href="contact.html" class="btn btn--ghost">ご相談・お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero__scroll" aria-hidden="true">
+    <div class="mouse"></div>
+    <div class="chevrons"><span></span><span></span></div>
+    <p class="txt">Scroll</p>
+  </div>
+</section>
+
+<!-- 事業領域（名刺の裏面モチーフ） -->
+<section class="fields" aria-label="事業領域">
+  <div class="container">
+    <div class="fields__grid">
+      <p class="fields__item">橋梁架設</p>
+      <p class="fields__item">鉄骨組立て等</p>
+      <p class="fields__item">足場全般</p>
+      <p class="fields__item">一般建築</p>
+    </div>
+  </div>
+</section>
+
+<!-- 選ばれる理由 -->
+<section class="section" aria-labelledby="reasons-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <p class="section-label">Reasons</p>
+      <h2 class="section-title" id="reasons-heading">公雅建設が選ばれる理由</h2>
+      <p class="section-lead">橋を架け、鉄骨を組み、重量物を空へ届ける。一つの判断ミスが大きな事故につながる仕事だからこそ、技術・安全・段取りのすべてに妥協しません。</p>
+    </div>
+    <div class="reasons">
+      <div class="reason-card reveal">
+        <div class="reason-card__num">01</div>
+        <h3 class="reason-card__title">高所へ届ける、希少な揚重技術</h3>
+        <p class="reason-card__text">重量物を高い場所へ吊り上げる「高所揚重」は、国内でも手がけられる会社が限られる仕事です。当社は超高層ビルの屋上への設備揚重をはじめ、高さのある現場を数多く経験してきました。</p>
+      </div>
+      <div class="reason-card reveal" data-delay="1">
+        <div class="reason-card__num">02</div>
+        <h3 class="reason-card__title">大型インフラで培った確かな技</h3>
+        <p class="reason-card__text">高速道路のジャンクション、河川を跨ぐ橋梁など、社会を支える大型インフラの架設現場に従事。夜間規制内での一括架設や送り出し架設など、高度な工法にも対応します。</p>
+      </div>
+      <div class="reason-card reveal" data-delay="2">
+        <div class="reason-card__num">03</div>
+        <h3 class="reason-card__title">安全と段取りへのこだわり</h3>
+        <p class="reason-card__text">現地調査・作業計画の立案から施工まで一貫して対応。吊り荷の重心確認、風速管理、作業前点検——安全のための手順を一切省略せず、現場ごとの制約に合わせた最適な段取りを組みます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 事業内容ダイジェスト -->
+<section class="section section--alt" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <p class="section-label">Services</p>
+      <h2 class="section-title" id="services-heading">事業内容</h2>
+      <p class="section-lead">橋梁・鉄骨・足場・建築、そして重量物の揚重。「吊る・組む・架ける」の技術で、幅広い工事をお引き受けします。</p>
+    </div>
+    <div class="services-grid">
+      <a href="service.html#lifting" class="service-card reveal">
+        <div class="service-card__visual"><img src="images/hero_jfe.jpg" alt="大型クレーンによる揚重工事" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">重量物揚重工事</h3>
+          <p class="service-card__text">クレーンによる重量物の吊り上げ・吊り降ろし。超高層の屋上など、高さのある現場を得意としています。</p>
+          <div class="service-tags"><span class="service-tag">高所揚重</span><span class="service-tag">搬出入</span><span class="service-tag">据付</span></div>
+        </div>
+      </a>
+      <a href="service.html#bridge" class="service-card reveal" data-delay="1">
+        <div class="service-card__visual"><img src="images/hero_gotemba.jpg" alt="橋梁架設工事" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">橋梁架設工事</h3>
+          <p class="service-card__text">高速道路や河川橋梁の鋼桁架設。一括架設・送り出しなど、現場条件に応じた工法で施工します。</p>
+          <div class="service-tags"><span class="service-tag">夜間一括架設</span><span class="service-tag">送り出し</span><span class="service-tag">多軸台車</span></div>
+        </div>
+      </a>
+      <a href="service.html#steel" class="service-card reveal" data-delay="2">
+        <div class="service-card__visual"><img src="images/hero_ebina.jpg" alt="鉄骨組立て工事" loading="lazy"></div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">鉄骨組立て工事</h3>
+          <p class="service-card__text">建築鉄骨や橋梁付帯の鉄骨組立て。図面の読み込みから建方・本締めまで確実に行います。</p>
+          <div class="service-tags"><span class="service-tag">建方</span><span class="service-tag">本締め</span><span class="service-tag">歪み直し</span></div>
+        </div>
+      </a>
+      <a href="service.html#scaffold" class="service-card reveal" data-delay="3">
+        <div class="service-card__visual">
+          <div class="ph" aria-hidden="true">
+            <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg>
+          </div>
+        </div>
+        <div class="service-card__body">
+          <h3 class="service-card__title">足場全般・一般建築</h3>
+          <p class="service-card__text">各種足場の設置・解体から一般建築まで。安全で使いやすい仮設計画をご提案します。</p>
+          <div class="service-tags"><span class="service-tag">枠組足場</span><span class="service-tag">吊り足場</span><span class="service-tag">一般建築</span></div>
+        </div>
+      </a>
+    </div>
+    <p class="center mt-40 reveal"><a href="service.html" class="btn btn--outline">事業内容をくわしく見る <span class="arrow">→</span></a></p>
+  </div>
+</section>
+
+<!-- 施工実績（最新3件） -->
+<section class="section" aria-labelledby="works-heading">
+  <div class="container">
+    <div class="section-header center reveal">
+      <p class="section-label">Works</p>
+      <h2 class="section-title" id="works-heading">施工実績</h2>
+      <p class="section-lead">これまでに手がけた工事の一部をご紹介します。カードをクリックすると詳細をご覧いただけます。</p>
+    </div>
+    <div class="works-grid" id="works-grid" data-limit="3"></div>
+    <p class="center mt-40 reveal"><a href="works.html" class="btn btn--outline">施工実績をもっと見る <span class="arrow">→</span></a></p>
+  </div>
+</section>
+
+<!-- 採用ミニバナー -->
+<section class="section section--alt" aria-label="採用情報">
+  <div class="container">
+    <div class="recruit-banner reveal">
+      <div>
+        <h2 class="recruit-banner__title">採用情報｜経験者募集中</h2>
+        <p class="recruit-banner__text">日本でも数少ない高所揚重の現場で、技術を活かしませんか。重量物取扱いの実務経験3年以上の方を募集しています。</p>
+      </div>
+      <a href="recruit.html" class="btn btn--primary">募集要項を見る <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" aria-label="お問い合わせ">
+  <div class="container cta__inner">
+    <h2 class="cta__title reveal">工事のご相談、お気軽にどうぞ</h2>
+    <p class="cta__text reveal">「この重さ・この高さで対応できるか」「他社に断られてしまった」——そんな案件こそお任せください。現場の条件をお伺いし、最適な工法をご提案します。お見積もりはご相談のうえ承ります。</p>
+    <div class="cta__btns reveal">
+      <a href="contact.html" class="btn btn--primary">お問い合わせフォーム <span class="arrow">→</span></a>
+      <div>
+        <a class="cta__tel" href="tel:0423605114">042-360-5114</a>
+        <p class="cta__tel-note">受付時間 8:00〜17:00（日曜定休）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 実績詳細モーダル -->
+<div class="modal" id="work-modal" role="dialog" aria-modal="true" aria-label="施工実績の詳細">
+  <div class="modal__overlay"></div>
+  <div class="modal__panel">
+    <button type="button" class="modal__close" aria-label="閉じる">✕</button>
+    <div class="modal__img"><img src="" alt=""></div>
+    <div class="modal__body">
+      <span class="work-card__cat modal__cat"></span>
+      <h3 class="work-card__title modal__title" style="font-size:1.2rem; margin-top:10px;"></h3>
+      <p class="work-card__meta modal__meta"></p>
+      <p class="modal__desc" style="margin-top:14px; font-size:.93rem;"></p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M8 46L46 8M54 8L92 46M92 54L54 92M46 92L8 54" stroke="currentColor" stroke-width="7" fill="none"/>
+          <text x="50" y="62" text-anchor="middle" font-size="34" font-family="'Shippori Mincho B1',serif" font-weight="700" fill="currentColor">春</text>
+        </svg>
+        <div>
+          <p class="footer__name">株式会社公雅建設</p>
+          <p class="footer__addr">
+            〒183-0013 東京都府中市小柳町1-20-1 サンズ細野301<br>
+            【八王子拠点】〒192-0354 東京都八王子市松が谷17-1-809<br>
+            TEL：<a href="tel:0423605114" style="color:inherit;">042-360-5114</a>（受付 8:00〜17:00）
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">Menu</p>
+        <ul class="footer__nav">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="service.html">事業内容</a></li>
+          <li><a href="works.html">施工実績</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">License</p>
+        <p class="footer__addr">建設業許可<br>東京都知事許可（般-27）第143593号</p>
+      </div>
+    </div>
+    <div class="footer__bottom">&copy; 株式会社公雅建設 All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="js/works-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

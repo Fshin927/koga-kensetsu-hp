@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>施工実績｜株式会社公雅建設 — 橋梁架設・揚重工事の実績</title>
+<meta name="description" content="株式会社公雅建設の施工実績。御殿場ジャンクションや海老名北ジャンクションの橋梁架設、夜間一括架設、超高層ビル屋上への設備揚重など、実際の現場をご紹介します。">
+<meta property="og:title" content="施工実績｜株式会社公雅建設">
+<meta property="og:description" content="橋梁架設・揚重工事など、これまでの施工実績をご紹介します。">
+<meta property="og:type" content="article">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700&family=EB+Garamond:wght@400;500&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__inner">
+    <svg class="loader__crane" viewBox="0 0 200 210" fill="none" aria-hidden="true">
+      <path d="M10 24H190M100 24V10M64 10h72" stroke="currentColor" stroke-width="3"/>
+      <path class="loader__rope" d="M100 24v54" stroke="currentColor" stroke-width="2"/>
+      <g class="loader__lift">
+        <path d="M100 78l-26 28M100 78l26 28" stroke="currentColor" stroke-width="2"/>
+        <g transform="translate(100 144)">
+          <path d="M-40 -4L-4 -40M4 -40L40 -4M40 4L4 40M-4 40L-40 4" stroke="currentColor" stroke-width="6"/>
+          <rect x="-16" y="-16" width="32" height="32" fill="#28221a"/>
+          <text x="0" y="9" text-anchor="middle" font-size="23" font-family="'Shippori Mincho B1',serif" font-weight="700" fill="#f2e9d6">春</text>
+        </g>
+      </g>
+    </svg>
+    <p class="loader__name">株式会社公雅建設</p>
+    <p class="loader__en">KOUGA KENSETSU</p>
+  </div>
+</div>
+
+<header class="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M8 46L46 8M54 8L92 46M92 54L54 92M46 92L8 54" stroke="currentColor" stroke-width="7" fill="none"/>
+        <text x="50" y="62" text-anchor="middle" font-size="34" font-family="'Shippori Mincho B1',serif" font-weight="700" fill="currentColor">春</text>
+      </svg>
+      <span>
+        <span class="name">株式会社公雅建設</span>
+        <span class="tagline">KOUGA KENSETSU</span>
+      </span>
+    </a>
+    <button class="menu-btn" type="button" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <a href="index.html">ホーム</a>
+      <a href="service.html">事業内容</a>
+      <a href="works.html">施工実績</a>
+      <a href="company.html">会社概要</a>
+      <a href="recruit.html">採用情報</a>
+      <a href="contact.html" class="gnav__cta">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="page-header">
+  <div class="page-header__bg" style="background-image:url('images/hero_gotemba.jpg')" aria-hidden="true"></div>
+  <div class="container">
+    <p class="page-header__label">Works</p>
+    <h1 class="page-header__title">施工実績</h1>
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">ホーム</a><span class="sep">/</span>施工実績
+    </nav>
+  </div>
+</div>
+
+<section class="section" aria-label="施工実績一覧">
+  <div class="container">
+    <div class="section-header reveal">
+      <p class="section-label">Case Studies</p>
+      <h2 class="section-title">これまでの施工実績</h2>
+      <p class="section-lead">重さ・高さ・搬入条件——ひとつとして同じ現場はありません。これまでに手がけた工事の一部をご紹介します。カテゴリで絞り込みができ、カードをクリックすると詳細をご覧いただけます。</p>
+    </div>
+    <div class="works-filter" role="group" aria-label="カテゴリで絞り込み"></div>
+    <div class="works-grid" id="works-grid"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" aria-label="お問い合わせ">
+  <div class="container cta__inner">
+    <h2 class="cta__title reveal">同じような工事でお困りですか？</h2>
+    <p class="cta__text reveal">掲載していない工事の実績も多数ございます。「うちの現場でもできるか」まずはお気軽にご相談ください。</p>
+    <div class="cta__btns reveal">
+      <a href="contact.html" class="btn btn--primary">お問い合わせフォーム <span class="arrow">→</span></a>
+      <div>
+        <a class="cta__tel" href="tel:0423605114">042-360-5114</a>
+        <p class="cta__tel-note">受付時間 8:00〜17:00（日曜定休）</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 実績詳細モーダル -->
+<div class="modal" id="work-modal" role="dialog" aria-modal="true" aria-label="施工実績の詳細">
+  <div class="modal__overlay"></div>
+  <div class="modal__panel">
+    <button type="button" class="modal__close" aria-label="閉じる">✕</button>
+    <div class="modal__img"><img src="" alt=""></div>
+    <div class="modal__body">
+      <span class="work-card__cat modal__cat"></span>
+      <h3 class="work-card__title modal__title" style="font-size:1.2rem; margin-top:10px;"></h3>
+      <p class="work-card__meta modal__meta"></p>
+      <p class="modal__desc" style="margin-top:14px; font-size:.93rem;"></p>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <svg class="mark" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M8 46L46 8M54 8L92 46M92 54L54 92M46 92L8 54" stroke="currentColor" stroke-width="7" fill="none"/>
+          <text x="50" y="62" text-anchor="middle" font-size="34" font-family="'Shippori Mincho B1',serif" font-weight="700" fill="currentColor">春</text>
+        </svg>
+        <div>
+          <p class="footer__name">株式会社公雅建設</p>
+          <p class="footer__addr">
+            〒183-0013 東京都府中市小柳町1-20-1 サンズ細野301<br>
+            【八王子拠点】〒192-0354 東京都八王子市松が谷17-1-809<br>
+            TEL：<a href="tel:0423605114" style="color:inherit;">042-360-5114</a>（受付 8:00〜17:00）
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">Menu</p>
+        <ul class="footer__nav">
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="service.html">事業内容</a></li>
+          <li><a href="works.html">施工実績</a></li>
+          <li><a href="company.html">会社概要</a></li>
+          <li><a href="recruit.html">採用情報</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">License</p>
+        <p class="footer__addr">建設業許可<br>東京都知事許可（般-27）第143593号</p>
+      </div>
+    </div>
+    <div class="footer__bottom">&copy; 株式会社公雅建設 All Rights Reserved.</div>
+  </div>
+</footer>
+
+<script src="js/works-data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
