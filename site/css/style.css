@@ -444,7 +444,7 @@ body.is-loading .fade-line, body.is-loading .hero__btns { animation-play-state: 
 .cta__title { font-family: var(--font-min); font-size: clamp(1.4rem, 3vw, 1.85rem); font-weight: 700; margin-bottom: 16px; letter-spacing: .12em; }
 .cta__text { color: rgba(242,233,214,.8); max-width: 640px; margin: 0 auto 32px; font-size: .93rem; }
 .cta__btns { display: flex; flex-wrap: wrap; gap: 18px; justify-content: center; align-items: center; }
-.cta__tel { font-family: var(--font-en); font-size: 2rem; color: var(--c-paper); letter-spacing: .08em; }
+.cta__tel { font-family: var(--font-en); font-size: clamp(1.1rem, 3vw, 1.6rem); color: var(--c-paper); letter-spacing: .06em; word-break: break-all; }
 .cta__tel-note { font-size: .78rem; color: rgba(242,233,214,.65); }
 
 /* 採用ミニバナー（トップ用） */
@@ -526,7 +526,7 @@ body.is-loading .fade-line, body.is-loading .hero__btns { animation-play-state: 
   padding: 42px 28px; box-shadow: var(--shadow); margin-bottom: 56px;
 }
 .contact-tel__label { font-family: var(--font-min); font-weight: 700; margin-bottom: 6px; letter-spacing: .12em; }
-.contact-tel__num { font-family: var(--font-en); font-size: clamp(2rem, 5vw, 2.7rem); letter-spacing: .06em; }
+.contact-tel__num { font-family: var(--font-en); font-size: clamp(1.2rem, 4vw, 1.9rem); letter-spacing: .04em; word-break: break-all; }
 .contact-tel__num a { color: var(--c-ink); }
 .contact-tel__num a:hover { color: var(--c-accent); }
 .contact-tel__note { font-size: .82rem; color: var(--c-muted); margin-top: 6px; }

@@ -286,7 +286,7 @@ function initForm() {
         showResult(result, "お問い合わせありがとうございます。内容を確認のうえ、担当者よりご連絡いたします。", false);
         form.reset();
       } catch {
-        showResult(result, "送信に失敗しました。お手数ですが、時間をおいて再度お試しいただくか、お電話にてご連絡ください。", true);
+        showResult(result, "送信に失敗しました。お手数ですが、時間をおいて再度お試しいただくか、メールにて直接ご連絡ください。", true);
       }
     } else {
       // デモ動作
