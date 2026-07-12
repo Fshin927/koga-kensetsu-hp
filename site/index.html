@@ -278,6 +278,25 @@
   </div>
 </footer>
 
+<!-- 固定お問い合わせバー -->
+<div id="contact-dock" role="navigation" aria-label="お問い合わせ導線">
+  <a class="cd-form" href="contact.html">お問い合わせフォーム <span aria-hidden="true">→</span></a>
+  <a class="cd-mail" href="mailto:baru.k.t1975@ozzio.jp">&#9993; メールで相談</a>
+</div>
+<style>
+#contact-dock{position:fixed;left:0;right:0;bottom:0;z-index:90;display:flex;background:rgba(40,34,26,.97);box-shadow:0 -2px 14px rgba(40,34,26,.35);}
+#contact-dock a{flex:1;text-align:center;padding:15px 8px;font-size:.92rem;font-weight:700;color:#f2e9d6;letter-spacing:.06em;line-height:1.4;}
+#contact-dock .cd-form{background:#b3492e;color:#fff;}
+#contact-dock .cd-form:hover{background:#93381f;}
+#contact-dock .cd-mail:hover{background:rgba(242,233,214,.08);}
+body{padding-bottom:54px;}
+@media(min-width:901px){
+  #contact-dock{left:auto;right:24px;bottom:24px;border-radius:999px;overflow:hidden;box-shadow:0 6px 24px rgba(40,34,26,.4);}
+  #contact-dock a{flex:none;padding:14px 28px;}
+  body{padding-bottom:0;}
+}
+</style>
+
 <script src="js/works-data.js"></script>
 <script src="js/main.js"></script>
 </body>
