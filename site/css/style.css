@@ -167,7 +167,10 @@ body.nav-open .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-
   .header__logo { color: var(--c-ink); }
   .menu-btn span { background: var(--c-ink); }
   .header.is-scrolled .menu-btn span { background: var(--c-ink); }
-  body.nav-open .menu-btn span { background: var(--c-paper) !important; } /* メニュー展開中は✕を白に（暗幕上で見えるように） */
+  body.nav-open .menu-btn span {
+    background: #f2e9d6 !important; /* メニュー展開中は✕を生成り色に（暗幕上で見えるように） */
+    box-shadow: 0 0 0 1px rgba(242, 233, 214, .55); /* 万一の描画差異でも輪郭で視認できる保険 */
+  }
 
   /* スマホ: スクロールボタン風のインジケーターは非表示 */
   .hero__scroll { display: none; }
