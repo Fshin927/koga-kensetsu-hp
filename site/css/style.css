@@ -157,6 +157,20 @@ body.nav-open .menu-btn span:nth-child(3) { transform: translateY(-7px) rotate(-
   .gnav a::after { display: none; }
   .gnav .gnav__cta { margin-left: 0; margin-top: 14px; }
   body.nav-open { overflow: hidden; }
+
+  /* スマホ: ヘッダーを常時不透明にし、どのスクロール位置でもメニューを見やすく */
+  .header {
+    background: rgba(242, 233, 214, .97);
+    box-shadow: 0 1px 14px rgba(40, 34, 26, .12);
+  }
+  .header.is-scrolled { backdrop-filter: none; } /* iOS Safariの描画崩れ防止 */
+  .header__logo { color: var(--c-ink); }
+  .menu-btn span { background: var(--c-ink); }
+  .header.is-scrolled .menu-btn span { background: var(--c-ink); }
+  body.nav-open .menu-btn span { background: var(--c-paper) !important; } /* メニュー展開中は✕を白に（暗幕上で見えるように） */
+
+  /* スマホ: スクロールボタン風のインジケーターは非表示 */
+  .hero__scroll { display: none; }
 }
 
 /* --------------------------------------------------------------------------
