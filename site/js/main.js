@@ -156,10 +156,10 @@ function initWorks() {
       .map(
         (w) => `
       <button type="button" class="work-card reveal is-visible" data-work-index="${WORKS.indexOf(w)}">
-        <div class="work-card__img"><img src="${workImageSrc(w)}" alt="${w.title}" loading="lazy"></div>
+        <div class="work-card__img"><img src="${workImageSrc(w)}" alt="${w.title || w.category}" loading="lazy"></div>
         <div class="work-card__body">
           <span class="work-card__cat">${w.category}</span>
-          <h3 class="work-card__title">${w.title}</h3>
+          ${w.title ? `<h3 class="work-card__title">${w.title}</h3>` : ""}
           <p class="work-card__meta">${workMeta(w)}</p>
         </div>
       </button>`
@@ -203,9 +203,10 @@ function initModal() {
       const w = WORKS[parseInt(card.dataset.workIndex, 10)];
       if (!w) return;
       img.src = workImageSrc(w);
-      img.alt = w.title;
+      img.alt = w.title || w.category;
       cat.textContent = w.category;
       title.textContent = w.title;
+      title.style.display = w.title ? "" : "none";
       meta.textContent = workMeta(w);
       desc.textContent = w.description;
       modal.classList.add("is-open");
