@@ -620,3 +620,74 @@ body.is-loading .fade-line, body.is-loading .hero__btns { animation-play-state: 
 /* ユーティリティ */
 .mt-40 { margin-top: 40px; }
 .center { text-align: center; }
+
+/* ==========================================================================
+   スマホ最適化（追記）: 「文字の壁」感を解消し、視覚的で操作しやすく
+   ========================================================================== */
+@media (max-width: 640px) {
+  /* 行間・余白を詰めて、1画面あたりの情報量と読みやすさを両立 */
+  body { line-height: 1.75; font-size: 15px; letter-spacing: .02em; }
+  .container { padding: 0 18px; }
+  .section { padding: 50px 0; }
+  .section-header { margin-bottom: 26px; }
+
+  /* 見出しをはっきり・本文はゆったり読める行間に */
+  .section-label { font-size: .68rem; letter-spacing: .28em; }
+  .section-title { font-size: 1.42rem; line-height: 1.5; letter-spacing: .03em; }
+  .section-lead { font-size: .92rem; line-height: 1.95; margin-top: 14px; }
+
+  /* ボタンは全幅で大きく、指で押しやすく */
+  .btn { width: 100%; padding: 16px 24px; font-size: 1rem; }
+  .btn .arrow { margin-left: auto; }
+
+  /* ヒーロー: 高さを抑え、CTAを縦積み全幅に */
+  .hero { min-height: 86svh; }
+  .hero__title { line-height: 1.5; margin-bottom: 18px; }
+  .hero__lead { font-size: .95rem; line-height: 1.95; margin-bottom: 28px; }
+  .hero__btns { flex-direction: column; gap: 12px; width: 100%; }
+
+  /* 事業領域: 中央寄せの羅列 → 2列タグ風で一目でわかる */
+  .fields { padding: 28px 0; }
+  .fields__grid { gap: 10px; }
+  .fields__item {
+    flex: 1 1 44%; justify-content: center; text-align: center;
+    border: 1px solid rgba(242,233,214,.3); border-radius: 6px;
+    padding: 13px 8px; font-size: .92rem; letter-spacing: .06em; gap: 0;
+  }
+  .fields__item::before { display: none; }
+
+  /* 選ばれる理由・安全カード: ゆったり読める行間 */
+  .reason-card { padding: 26px 22px; }
+  .reason-card__text { font-size: .92rem; line-height: 1.9; }
+
+  /* 事業内容カード: タイトル大きめ */
+  .service-card__body { padding: 20px 20px 24px; }
+  .service-card__title { font-size: 1.14rem; }
+  .service-card__text { font-size: .9rem; line-height: 1.85; }
+
+  /* 事業内容 詳細: 画像を主役に、特徴リストをカード化して視認性UP */
+  .service-detail { padding: 30px 0; gap: 18px; }
+  .service-detail__visual, .service-detail__visual img { min-height: 0; }
+  .service-detail__visual img { aspect-ratio: 16 / 10; height: auto; border-radius: 6px; }
+  .service-detail__title { font-size: 1.3rem; margin: 8px 0 12px; }
+  .service-detail__text { font-size: .93rem; line-height: 1.9; margin-bottom: 16px; }
+  .service-detail ul.checks li {
+    color: var(--c-ink); background: rgba(179, 73, 46, .055);
+    padding: 12px 12px 12px 36px; margin-bottom: 8px; border-radius: 5px;
+    font-size: .92rem; line-height: 1.65;
+  }
+  .service-detail ul.checks li::before { left: 15px; top: 19px; }
+
+  /* CTA: ボタンを縦積み全幅に */
+  .cta { padding: 54px 0; }
+  .cta__btns { flex-direction: column; gap: 14px; }
+
+  /* 施工実績: 絞り込みは横スクロール、カードは画像大きめ */
+  .works-filter { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; margin-bottom: 26px; padding-bottom: 4px; }
+  .works-filter::-webkit-scrollbar { display: none; }
+  .works-filter button { flex: none; padding: 11px 20px; }
+  .work-card__img { aspect-ratio: 16 / 9; }
+  .work-card__body { padding: 16px 18px 20px; }
+  .work-card__title { font-size: 1.08rem; }
+  .work-card__meta { font-size: .82rem; }
+}
