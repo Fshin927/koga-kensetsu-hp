@@ -4,7 +4,7 @@
 // place / date は不明な場合 "" のままで構いません（表示されません）。
 const WORKS = [
   {
-    title: "変電所 変圧器 重量物揚重・据付工事",
+    title: "",
     category: "変電所・据付",
     place: "東京都内（某所）",
     date: "",
@@ -12,7 +12,7 @@ const WORKS = [
     image: "g_kabukicho_3.jpg"
   },
   {
-    title: "変電所 設備更新 撤去・搬出入工事",
+    title: "",
     category: "変電所・据付",
     place: "東京都内（某所）",
     date: "",
