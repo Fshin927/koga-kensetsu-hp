@@ -5,7 +5,9 @@
 // お問い合わせフォームの送信先。
 // Formspree等のURL（例: "https://formspree.io/f/xxxxxxxx"）を設定すると実送信されます。
 // 空のままの場合はデモ動作（送信内容の確認メッセージ表示）になります。
-const CONTACT_ENDPOINT = "";
+// FormSubmit経由で baru.k.t1975@ozzio.jp にお問い合わせ内容が届きます。
+// ※初回送信時に上記アドレス宛の確認メールが届くので、本文中のリンクを一度クリックして有効化してください（1回だけ）。
+const CONTACT_ENDPOINT = "https://formsubmit.co/ajax/baru.k.t1975@ozzio.jp";
 
 initLoader();
 
