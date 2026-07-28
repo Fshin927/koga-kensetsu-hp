@@ -419,9 +419,7 @@ body.is-loading .fade-line, body.is-loading .hero__btns { animation-play-state: 
 .work-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
 .work-card__img { aspect-ratio: 16 / 10; overflow: hidden; background: var(--c-ink); }
 .work-card__img img { width: 100%; height: 100%; object-fit: cover; transition: transform .45s; }
-/* 縦長写真は切り抜かずに全体を表示（JSで .is-portrait を付与） */
-.work-card__img.is-portrait img { object-fit: contain; }
-.work-card:hover .work-card__img.is-portrait img { transform: none; }
+/* 一覧のサムネイルは縦横比を問わず枠いっぱいに表示（写真全体はタップ後の詳細で確認できる） */
 .work-card:hover .work-card__img img { transform: scale(1.06); }
 .work-card__body { padding: 20px 22px 24px; }
 .work-card__cat {

@@ -145,28 +145,6 @@ function workMeta(w) {
   return [w.place, w.date].filter(Boolean).join("｜");
 }
 
-// 縦長写真は枠に合わせて切り抜くと全体が見えないため、
-// 読み込み後に縦横比を判定して親要素に .is-portrait を付与する（CSS側で contain 表示に切替）
-function markPortraitImages(container, imgSelector, targetSelector) {
-  // 遅延読み込み画像は load の取りこぼしが起こりうるため、
-  // load / scroll / 遅延タイマーの複数契機で再スキャンする
-  const scan = () => {
-    let pending = 0;
-    container.querySelectorAll(imgSelector).forEach((img) => {
-      if (!img.naturalWidth) { pending++; return; }
-      if (img.naturalHeight > img.naturalWidth * 1.05) {
-        (targetSelector ? img.closest(targetSelector) : img.parentElement)?.classList.add("is-portrait");
-      }
-    });
-    return pending;
-  };
-  scan();
-  container.querySelectorAll(imgSelector).forEach((img) => img.addEventListener("load", scan, { once: true }));
-  const onScroll = () => { if (scan() === 0) window.removeEventListener("scroll", onScroll); };
-  window.addEventListener("scroll", onScroll, { passive: true });
-  [400, 1200, 3000].forEach((t) => setTimeout(scan, t));
-}
-
 function initWorks() {
   const grid = document.getElementById("works-grid");
   if (!grid || typeof WORKS === "undefined") return;
@@ -189,7 +167,6 @@ function initWorks() {
       </button>`
       )
       .join("");
-    markPortraitImages(grid, ".work-card__img img", ".work-card__img");
   };
   render("all");
 
