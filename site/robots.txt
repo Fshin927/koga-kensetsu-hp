@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# ↓ 独自ドメインが決まったら、下の行のコメント（#）を外してドメインを書き換えてください
+# Sitemap: https://ドメイン名/sitemap.xml

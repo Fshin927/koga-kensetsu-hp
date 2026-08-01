@@ -1,0 +1,60 @@
+# ============================================================
+# お名前.com レンタルサーバーへの自動アップロード（任意）
+#
+# GitHubリポジトリの Settings → Secrets and variables → Actions に
+# 以下4つを登録すると、main への push で site/ の内容が自動反映されます。
+#   FTP_SERVER      … FTPサーバー名（ftps:// は付けない）
+#   FTP_USERNAME    … FTPユーザー名
+#   FTP_PASSWORD    … FTPパスワード
+#   FTP_SERVER_DIR  … 公開フォルダのパス（末尾に / を付ける）
+#
+# 未登録のうちは何もせずスキップするので、そのまま置いておいても安全です。
+# 詳細は DEPLOY.md の「10. 今後サイトを更新するとき」を参照。
+# ============================================================
+name: Deploy to onamae.com (FTP)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "site/**"
+      - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
+concurrency:
+  group: ftp-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: FTP設定の有無を確認
+        id: check
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          if [ -z "$FTP_SERVER" ]; then
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::FTP secrets が未設定のため、アップロードをスキップしました（DEPLOY.md 参照）"
+          else
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: サーバーへアップロード
+        if: steps.check.outputs.configured == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./site/
+          server-dir: ${{ secrets.FTP_SERVER_DIR }}
+          # サーバー上のこれらは削除・上書きしない
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
