@@ -20,14 +20,9 @@ Options -Indexes
   RewriteCond %{HTTP:X-Forwarded-Proto} !=https
   RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-  # ---（任意）www あり／なしを統一したい場合 ---
-  # A) www なしに統一（例: https://example.com/）… 下2行の # を外す
-  # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-  #
-  # B) www ありに統一（例: https://www.example.com/）… 下2行の # を外す
-  # RewriteCond %{HTTP_HOST} !^www\. [NC]
-  # RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+  # www なしに統一（https://koga-kensetsu.co/ が正式URL）
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 </IfModule>
 
 # エラーページ
